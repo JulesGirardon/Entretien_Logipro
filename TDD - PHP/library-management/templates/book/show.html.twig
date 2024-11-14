@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book Details{% endblock %}
+
+{% block body %}
+    <h1>Book Details</h1>
+
+    <div class="book-details">
+        <h2>{{ book.title }}</h2>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+        <p>
+            <strong>Availability:</strong>
+            {% if book.isAvailable %}
+                <span class="available">Available</span>
+            {% else %}
+                <span class="unavailable">Not Available</span>
+            {% endif %}
+        </p>
+    </div>
+
+    <a href="{{ path('book_index') }}" class="btn btn-primary">Back to List</a>
+{% endblock %}

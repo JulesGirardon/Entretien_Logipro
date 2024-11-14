@@ -1,0 +1,16 @@
+{
+    "name": "jules/newsletters-plugin",
+    "description": "Plugin pour ajouter un formulaire d'inscription à une newsletter.",
+    "autoload": {
+        "psr-4": {
+            "Jules\\NewslettersPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jules G.",
+            "email": "jules.grdn@gmail.com"
+        }
+    ],
+    "require": {}
+}

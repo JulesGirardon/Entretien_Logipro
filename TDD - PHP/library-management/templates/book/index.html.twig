@@ -1,0 +1,17 @@
+{# templates/book/index.html.twig #}
+
+<h1>List of Books</h1>
+
+<ul>
+    {% for book in books %}
+        <li class="book-item">
+            <a href="{{ path('book_show', {'id': book.id}) }}">
+                {{ book.title }} by {{ book.author }}
+            </a>
+        </li>
+    {% else %}
+        <li>No books available</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ path('book_new') }}">Add a new book</a>
